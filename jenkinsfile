@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        DEV_SERVER = "16.171.115.204"
-        STG_SERVER = "13.62.227.80"
-        PRD_SERVER = "13.53.216.8"
+        DEV_SERVER = "16.170.236.14"
+        STG_SERVER = "16.171.26.107"
+        PRD_SERVER = "13.53.132.43"
         USER = "ec2-user"
     }
 
@@ -18,7 +18,7 @@ pipeline {
 
         stage('Deploy to DEV') {
             when {
-                branch 'Dev'
+                branch 'dev'
             }
             steps {
                 sh """
@@ -30,7 +30,7 @@ pipeline {
 
         stage('Deploy to STG') {
             when {
-                branch 'Stg'
+                branch 'stg'
             }
             steps {
                 sh """
