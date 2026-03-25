@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        DEV_SERVER = "51.21.180.177"
-        STG_SERVER = "13.62.98.248"
-        PRD_SERVER = "51.21.169.5"
+        DEV_SERVER = "13.60.94.146"
+        STG_SERVER = "13.61.175.22"
+        MAIN_SERVER = "51.21.199.14"
         USER = "ec2-user"
     }
 
